@@ -9,15 +9,20 @@
     <h1>המשימות שלי</h1>
     <input type="text" id="task-input" placeholder="משימה חדשה...">
     <button id="add-button">הוסף</button>
+    <ul id="task-list"></ul>
 
     <script>
-      // Find the input and the button by their id
+      // Find the input, the button and the list by their id
       const taskInput = document.getElementById("task-input");
       const addButton = document.getElementById("add-button");
+      const taskList = document.getElementById("task-list");
 
-      // When the button is clicked, show what was typed
+      // When the button is clicked, add the typed text as a new list item
       addButton.addEventListener("click", function () {
-        alert(taskInput.value);
+        const item = document.createElement("li");
+        item.textContent = taskInput.value;
+        taskList.appendChild(item);
+        taskInput.value = "";
       });
     </script>
   </body>
