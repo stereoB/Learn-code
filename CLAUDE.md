@@ -20,6 +20,7 @@
 - Small files. If a file passes ~150 lines, suggest splitting and explain why.
 - The app must work by opening index.html in a browser. Nothing to install.
 - Always keep the app in a working state at the end of a session.
+- Commit and push directly to main. No branches, no pull requests, unless Ben asks.
 
 ## The project
 
