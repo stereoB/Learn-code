@@ -9,5 +9,16 @@
     <h1>המשימות שלי</h1>
     <input type="text" id="task-input" placeholder="משימה חדשה...">
     <button id="add-button">הוסף</button>
+
+    <script>
+      // Find the input and the button by their id
+      const taskInput = document.getElementById("task-input");
+      const addButton = document.getElementById("add-button");
+
+      // When the button is clicked, show what was typed
+      addButton.addEventListener("click", function () {
+        alert(taskInput.value);
+      });
+    </script>
   </body>
 </html>
