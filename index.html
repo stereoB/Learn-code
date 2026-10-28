@@ -19,10 +19,15 @@
 
       // When the button is clicked, add the typed text as a new list item
       addButton.addEventListener("click", function () {
-        const item = document.createElement("li");
-        item.textContent = taskInput.value;
-        taskList.appendChild(item);
-        taskInput.value = "";
+        const text = taskInput.value.trim();
+
+        // Only add a task if something was actually typed
+        if (text !== "") {
+          const item = document.createElement("li");
+          item.textContent = text;
+          taskList.appendChild(item);
+          taskInput.value = "";
+        }
       });
     </script>
   </body>
